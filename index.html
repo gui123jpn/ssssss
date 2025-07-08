@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elden Ring Fan Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-color: #5e2e1d;
+            --secondary-color: #a67c52;
+            --accent-color: #d4a373;
+            --dark-color: #1a1a1a;
+            --light-color: #f8f9fa;
+        }
+
+        .dark-theme {
+            --primary-color: #1a1a1a;
+            --secondary-color: #333;
+            --accent-color: #5e2e1d;
+            --dark-color: #f8f9fa;
+            --light-color: #1a1a1a;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            transition: all 0.3s ease;
+        }
+
+        .bg-custom {
+            background-color: var(--primary-color);
+        }
+
+        .text-custom {
+            color: var(--accent-color);
+        }
+
+        .border-custom {
+            border-color: var(--secondary-color);
+        }
+
+        .game-card {
+            background: linear-gradient(to bottom right, var(--secondary-color), var(--primary-color));
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .music-player {
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(10px);
+        }
+
+        .tab.active {
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .comment-section {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--secondary-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 4px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .flex-col-mobile {
+                flex-direction: column;
+            }
+            
+            .w-full-mobile {
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-custom text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/171be1ce-0705-4bfa-a3d6-8f01c57df819.png" alt="Logo de Elden Ring mostrando o anel partido em dourado com fundo preto" class="h-10">
+                <span class="text-xl font-bold">Elden Ring Fan Page</span>
+            </div>
+            <div class="flex space-x-4">
+                <button id="themeToggle" class="px-4 py-2 bg-amber-700 hover:bg-amber-600 rounded transition">
+                    Modo Escuro
+                </button>
+                <a href="#game-info" class="hover:text-amber-300 transition">Jogo</a>
+                <a href="#character" class="hover:text-amber-300 transition">Personagem</a>
+                <a href="#community" class="hover:text-amber-300 transition">Comunidade</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-96 flex items-center justify-center bg-black overflow-hidden">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/816385fc-a18c-40cb-b692-bf59474078d1.png" alt="Vista panorâmica da The Lands Between mostrando a Erdtree no horizonte com céu crepuscular" class="absolute w-full h-full object-cover opacity-70">
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">ELDEN RING</h1>
+            <p class="text-xl text-amber-200 mb-8 max-w-2xl mx-auto">Torne-se o Lorde das Cinzas em uma jornada épica através das Terras Intermédias</p>
+            <button class="px-6 py-3 bg-amber-700 hover:bg-amber-600 text-white rounded-full font-bold transition transform hover:scale-105">
+                Explorar o Mundo
+            </button>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-8">
+        <!-- Game Information Section -->
+        <section id="game-info" class="mb-16">
+            <h2 class="text-3xl font-bold text-custom mb-6 border-b border-custom pb-2">Sobre o Jogo</h2>
+            
+            <div class="game-card rounded-lg p-6 text-white mb-8">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold mb-4">A Nova Obra-Prima da FromSoftware</h3>
+                        <p class="mb-4">Elden Ring é um RPG de ação em mundo aberto desenvolvido pela FromSoftware em colaboração com George R.R. Martin, autor de "As Crônicas de Gelo e Fogo". Situado nas Terras Intermédias, o jogo combina a jogabilidade desafiadora característica dos jogos Souls com um vasto mundo para explorar.</p>
+                        <p>Como um Maculado, você deve viajar pelo reino, derrotar demigodos e seus seguidores, e reunir os fragmentos do Elden Ring para se tornar o novo Lorde das Cinzas.</p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="bg-black rounded-lg overflow-hidden">
+                            <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/E3Huy2cdih0" title="Trailer de Elden Ring" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                    <div class="text-amber-600 text-3xl mb-3">🌎</div>
+                    <h3 class="text-xl font-bold mb-2">Mundo Aberto</h3>
+                    <p>Explore um mundo vasto e interconectado cheio de segredos, masmorras e inimigos desafiadores.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                    <div class="text-amber-600 text-3xl mb-3">⚔️</div>
+                    <h3 class="text-xl font-bold mb-2">Combate Intenso</h3>
+                    <p>Sistema de combate profundo com diversas armas, magias e habilidades para dominar.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                    <div class="text-amber-600 text-3xl mb-3">🧩</div>
+                    <h3 class="text-xl font-bold mb-2">História Enigmática</h3>
+                    <p>Narrativa fragmentada que encoraja a exploração e interpretação do jogador.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Character Section -->
+        <section id="character" class="mb-16">
+            <h2 class="text-3xl font-bold text-custom mb-6 border-b border-custom pb-2">Meu Personagem</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                <div class="w-full md:w-1/3">
+                    <div class="relative group">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7f34a14e-cac7-418b-a9b6-22ebd020ea38.png" alt="Personagem personalizado Tarnished usando armadura de Cavaleiro de Caria, empunhando a espada Moonveil com magias lunares brilhando ao redor em um campo de flores" class="w-full rounded-lg shadow-xl transform group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300 rounded-lg">
+                            <span class="text-white font-bold">Tarnished - Nível 125</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 text-center">
+                        <h3 class="text-2xl font-bold">Astrologer Renato</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">Maculado da Lua</p>
+                        
+                        <div class="mt-4 flex justify-center space-x-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Inteligência</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">Magia</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-full text-xs">Agilidade</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-2/3">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 h-full">
+                        <h3 class="text-xl font-bold mb-4 text-custom">Build Details</h3>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div>
+                                <h4 class="font-semibold">Arma Primária</h4>
+                                <p>Moonveil Katana +10</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Escudo</h4>
+                                <p>Carian Shield +8</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Armadura</h4>
+                                <p>Conjunto Carian Knight</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Talismãs</h4>
+                                <p>Graven-Mass, Radagon Icon, Dragoncrest, Moon of Nokstella</p>
+                            </div>
+                        </div>
+                        
+                        <h4 class="font-semibold mb-2 text-custom">Descrição do Build</h4>
+                        <p class="mb-4">Este build foca no uso da Moonveil Katana combinada com magias de gelo e lunar. Uma abordagem equilibrada entre combate corpo-a-corpo e magia de longa distância, ideal para duelos PvP e contra chefes.</p>
+                        
+                        <h4 class="font-semibold mb-2 text-custom">Magias Principais</h4>
+                        <ul class="list-disc pl-5 mb-4">
+                            <li>Adula's Moonblade</li>
+                            <li>Stars of Ruin</li>
+                            <li>Glintstone Icecrag</li>
+                            <li>Terra Magica</li>
+                        </ul>
+                        
+                        <div class="music-player p-4 rounded-lg mt-6">
+                            <h4 class="font-bold text-white mb-3">Trilha Sonora</h4>
+                            <div class="flex items-center space-x-4">
+                                <button id="playBtn" class="bg-amber-600 hover:bg-amber-500 text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <button id="pauseBtn" class="bg-amber-600 hover:bg-amber-500 text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <button id="stopBtn" class="bg-amber-600 hover:bg-amber-500 text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1V8a1 1 0 00-1-1H8z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <span class="text-white">"The Final Battle" - Elden Ring OST</span>
+                            </div>
+                            <audio id="gameMusic" loop>
+                                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8">
+                <h3 class="text-2xl font-bold text-custom mb-4">Minha Jornada</h3>
+                <p class="mb-4">Comecei como um astrologer modesto, usando apenas um bastão e magias básicas. Ao explorar as Terras Intermédias, descobri a Moonveil Katana nas minas de Gael e desde então desenvolvi este build híbrido único que combina a agressividade de uma katana com o poder das magias lunares.</p>
+                <p>Minha maior conquista foi derrotar Malenia, Blade of Miquella, após 87 tentativas. Essa vitória marcou minha transformação de um simples mago para um verdadeiro Cavaleiro da Lua.</p>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community" class="mb-16">
+            <h2 class="text-3xl font-bold text-custom mb-6 border-b border-custom pb-2">Comunidade</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Tips and Tricks -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4 text-custom">Dicas e Truques</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 border border-amber-200 rounded-lg">
+                            <h4 class="font-semibold text-amber-700 dark:text-amber-300">Contra Malenia</h4>
+                            <p class="text-sm">Use a habilidade "Transient Moonlight" da Moonveil para interromper seus ataques a distância. Traga summons que causem sangramento como Mimic Tear ou Tiche.</p>
+                        </div>
+                        
+                        <div class="p-4 border border-amber-200 rounded-lg">
+                            <h4 class="font-semibold text-amber-700 dark:text-amber-300">Fazenda de Runes</h4>
+                            <p class="text-sm">Na área de Mohgwyn Palace, há um local com muitos Albinaurics que dão 50k runes por corrida com o Gold Scarab Talisman.</p>
+                        </div>
+                        
+                        <div class="p-4 border border-amber-200 rounded-lg">
+                            <h4 class="font-semibold text-amber-700 dark:text-amber-300">Segredos Ocultos</h4>
+                            <p class="text-sm">No subterrâneo de Leyndell há uma passagem secreta que leva a um conjunto de armadura exclusivo. Use ataques rolantes para revelar paredes ilusórias.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Comments Section -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4 text-custom">Comentários da Comunidade</h3>
+                    
+                    <div class="comment-section mb-4">
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9e1c55e3-db41-400e-aa74-718115448698.png" alt="Avatar de usuário gamer com capacete de cavaleiro" class="w-10 h-10 rounded-full">
+                                <div>
+                                    <h4 class="font-semibold">Solairinho43</h4>
+                                    <p class="text-sm">Alguém pode me ajudar com o chefe final? Estou preso faz 3 dias!</p>
+                                    <p class="text-xs text-gray-500">2 horas atrás</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/67cb42d9-e919-49a9-83d2-05fa8088ea89.png" alt="Avatar de usuário feminino com cabelos roxos" class="w-10 h-10 rounded-full">
+                                <div>
+                                    <h4 class="font-semibold">SorceressLuna</h4>
+                                    <p class="text-sm">Recomendo usar o talismã Haligdrake +2 contra Radagon, reduz muito o dano sagrado dele.</p>
+                                    <p class="text-xs text-gray-500">5 horas atrás</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c0cbf26e-10d9-4160-9894-78be82fbfc58.png" alt="Avatar de usuário com máscara de guerreiro" class="w-10 h-10 rounded-full">
+                                <div>
+                                    <h4 class="font-semibold">LetMeSoloHer</h4>
+                                    <p class="text-sm">Estou disponível para ajudar qualquer um contra Malenia. Já a derrotei 1000+ vezes.</p>
+                                    <p class="text-xs text-gray-500">1 dia atrás</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form id="commentForm" class="mt-4">
+                        <textarea class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-white" rows="3" placeholder="Deixe seu comentário ou dica..."></textarea>
+                        <button type="submit" class="mt-2 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Boss Guides -->
+            <div class="mt-8">
+                <h3 class="text-2xl font-bold text-custom mb-4">Guias de Chefes</h3>
+                
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white dark:bg-gray-800 rounded-lg overflow-hidden">
+                        <thead class="bg-custom text-white">
+                            <tr>
+                                <th class="py-3 px-4 text-left">Chefe</th>
+                                <th class="py-3 px-4 text-left">Localização</th>
+                                <th class="py-3 px-4 text-left">Dificuldade</th>
+                                <th class="py-3 px-4 text-left">Dicas</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+                            <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <td class="py-3 px-4">Malenia</td>
+                                <td class="py-3 px-4">Elphael</td>
+                                <td class="py-3 px-4">
+                                    <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">Extrema</span>
+                                </td>
+                                <td class="py-3 px-4">Evite Waterfowl Dance atrás dela, use sangramento</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <td class="py-3 px-4">Radahn</td>
+                                <td class="py-3 px-4">Caelid</td>
+                                <td class="py-3 px-4">
+                                    <span class="px-2 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-xs">Alta</span>
+                                </td>
+                                <td class="py-3 px-4">Use os summons da festa, ataque em cavalo</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <td class="py-3 px-4">Morgott</td>
+                                <td class="py-3 px-4">Leyndell</td>
+                                <td class="py-3 px-4">
+                                    <span class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-xs">Média</span>
+                                </td>
+                                <td class="py-3 px-4">Interrompa seus ataques com counter hits</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-custom text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/08ebc631-f5f7-4026-a9bd-1f9aeea30d9f.png" alt="Pequeno logo de Elden Ring" class="h-8">
+                        <span class="text-lg font-bold">Elden Ring Fan Page</span>
+                    </div>
+                    <p class="mt-2 text-sm text-amber-200">Não afiliado à FromSoftware ou Bandai Namco</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-amber-300 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-amber-300 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-amber-300 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-amber-300 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-6 pt-6 border-t border-amber-800 text-center text-sm">
+                <p>© 2023 Elden Ring Fan Page. Todos os direitos reservados.</p>
+                <p class="mt-2 text-amber-300">Elden Ring é uma marca registrada da FromSoftware e Bandai Namco Entertainment.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            
+            if (body.classList.contains('dark-theme')) {
+                themeToggle.textContent = 'Modo Claro';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeToggle.textContent = 'Modo Escuro';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-theme');
+            themeToggle.textContent = 'Modo Claro';
+        }
+        
+        // Music Player
+        const music = document.getElementById('gameMusic');
+        const playBtn = document.getElementById('playBtn');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        
+        playBtn.addEventListener('click', () => {
+            music.play();
+        });
+        
+        pauseBtn.addEventListener('click', () => {
+            music.pause();
+        });
+        
+        stopBtn.addEventListener('click', () => {
+            music.pause();
+            music.currentTime = 0;
+        });
+        
+        // Comment Form
+        const commentForm = document.getElementById('commentForm');
+        const commentSection = document.querySelector('.comment-section');
+        
+        commentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const commentText = commentForm.querySelector('textarea').value;
+            
+            if (commentText.trim() !== '') {
+                const newComment = document.createElement('div');
+                newComment.className = 'flex items-start space-x-3';
+                newComment.innerHTML = `
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c1aa1401-f785-4adc-a771-3707334d173d.png" alt="Novo avatar de comentário padrão" class="w-10 h-10 rounded-full">
+                    <div>
+                        <h4 class="font-semibold">Você</h4>
+                        <p class="text-sm">${commentText}</p>
+                        <p class="text-xs text-gray-500">Agora</p>
+                    </div>
+                `;
+                
+                commentSection.prepend(newComment);
+                commentForm.querySelector('textarea').value = '';
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
